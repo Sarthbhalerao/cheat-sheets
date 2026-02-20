@@ -39,4 +39,16 @@ apt list --upgradable# Git Commands Cheat-sheet
 
 - `git switch <branch_name>` : Switch branch
 
-- `git merge <branch_needed_to_merge>` : Merge the branch with the current branch 
+- `git merge <branch_needed_to_merge>` : Merge the branch with the current branch
+
+- `git stash` : git stash temporarily saves uncommitted work and clears the working directory.
+
+- **Example:** In the middle of a feature, you need to switch to main to fix a bug → run **git stash**, later use **git stash pop** to restore.
+
+- `git stash pop` : Retrieve unsaved work done with git stash and it clears the stash references.
+
+-`git stash apply` : Retrieve unsaved work done with git stash but keep the reference in stash list for later use.
+
+- 
+
+
