@@ -1,4 +1,4 @@
-# Git Commands Cheat-sheet
+apt list --upgradable# Git Commands Cheat-sheet
 
 ---
 
@@ -30,3 +30,13 @@
 - `git log --oneline` : View history in compact view.
 
 - `git diff` : See changes
+
+## Branching
+
+- `git checkout -b <branch_name>` : Create a new branch if doesnt exists or switch to existing branch. (do not include **-b**)
+
+- `git chekout <branch_name>` : switch to branch
+
+- `git switch <branch_name>` : Switch branch
+
+- 
