@@ -39,4 +39,4 @@ apt list --upgradable# Git Commands Cheat-sheet
 
 - `git switch <branch_name>` : Switch branch
 
-- 
+- `git merge <branch_needed_to_merge>` : Merge the branch with the current branch 
