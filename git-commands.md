@@ -33,6 +33,8 @@ apt list --upgradable# Git Commands Cheat-sheet
 
 ## Branching
 
+- `git branch` : Get the list of all present branches 
+
 - `git checkout -b <branch_name>` : Create a new branch if doesnt exists or switch to existing branch. (do not include **-b**)
 
 - `git chekout <branch_name>` : switch to branch
@@ -41,12 +43,13 @@ apt list --upgradable# Git Commands Cheat-sheet
 
 - `git merge <branch_needed_to_merge>` : Merge the branch with the current branch
 
+- `git branch -d <branch_name>` : Delete the branch
+
 ## Stash & pop
 
 - `git stash` : git stash temporarily saves uncommitted work and clears the working directory.
 
 - **Example:** In the middle of a feature, you need to switch to main to fix a bug → run **git stash**, later use **git stash pop** to restore.
-
 
 - `git stash pop` : Retrieve unsaved work done with git stash and it clears the stash references.
 
@@ -56,6 +59,5 @@ apt list --upgradable# Git Commands Cheat-sheet
 
 - `git cherry-pick <commit_hash>`: Git cherry-pick allows you to apply a specific commit from one branch onto another without merging the entire branch.
 
-- 
-
+- `git merge --squash <feature_branch>` : Squashing means combining multiple commits into a single commit
 
