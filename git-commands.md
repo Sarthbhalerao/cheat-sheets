@@ -59,5 +59,29 @@ apt list --upgradable# Git Commands Cheat-sheet
 
 - `git cherry-pick <commit_hash>`: Git cherry-pick allows you to apply a specific commit from one branch onto another without merging the entire branch.
 
-- `git merge --squash <feature_branch>` : Squashing means combining multiple commits into a single commit
+- `git merge --squash <branch_name>` : Squashing means combining multiple commits into a single commit
+
+- `git revert <hash>` : Sfaely creates new commits that undo changes but keeps the history.
+
+- `git reset` : It moves HEAD pointer back by one , deleting commits & without laving history behind.
+
+  - `git reset --soft <hash>` : It removes commit id only
+  - `git reset --mixed <hash>` : It removes commit id and keeps the working tree as it is.
+  - `git reset --hard <hash>` ; remove commit id and also remove working tree.
+
+- `git rebase <branch>` : It integrates changes by replaying your commits on top of the latest state of another branch , creating cleaner and linear history.
+
+- `git rm <file_name>` : Remove file
+
+- `git remove -f <file_name>` : Forcefully remove file.
+
+- `git remote add origin <url>` : Add a remote to the repository.
+
+- `hit remote set-url origin <url>` : change the origin url.
+
+- `git fetch origin <main>` : Fetches the changes not merges the changes
+
+- `git pull origin <main>` : Fetch and merge changes from remote repo
+
+- `git push origin <main>` : push the changes from local to remote repository.
 
