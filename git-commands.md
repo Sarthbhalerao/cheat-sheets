@@ -35,11 +35,13 @@
 
 - `git branch` : Get the list of all present branches 
 
-- `git checkout -b <branch_name>` : Create a new branch if doesnt exists or switch to existing branch. (do not include **-b**)
+- `git checkout -b <branch_name>` : Create a new branch if doesnt exists or switch to existing branch. (do not include **-b** if only switch required)
 
 - `git chekout <branch_name>` : switch to branch
 
 - `git switch <branch_name>` : Switch branch
+
+- `git switch -c <branch_name>`: creates a new branch and switches to that branch immediately.
 
 - `git merge <branch_needed_to_merge>` : Merge the branch with the current branch
 
