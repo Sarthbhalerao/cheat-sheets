@@ -1,4 +1,4 @@
-apt list --upgradable# Git Commands Cheat-sheet
+# Git Commands Cheat-sheet
 
 ---
 
