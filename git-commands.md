@@ -2,91 +2,163 @@
 
 ---
 
-- `git --version` : Used to check the git version.
-- `sudo apt install git -y` : Install git if not found.
+## Installation
+
+- `git --version`: Check installed Git version.
+  
+- `sudo apt install git -y`: Install Git on Linux.
+
+---
 
 ## Setup & Configuration
 
-- `git config --global user.name "your_name"` : Sets your global Git Username.
-- `git config --global user.email "email"` : Sets your global Git Email.
-- **Note: Git use this details to label your commits**
+- `git config --global user.name "your_name"`: Sets your global Git Username.
+  
+- `git config --global user.email "email"`: Sets your global Git Email.
+  
+- `git config --list`: Show all Git configuration.
+  
+- **Note: Git uses these details to label your commits**
+
+---
+
+## Repository Setup
+
+- `git init`: Initialize the empty repository into **Git** repository.
+  
+- `git clone <repo-url>`: Clone existing repository.
+
+---
 
 ## Basic Workflow
 
-- `git init` : Initialize the empty repository into **Git** repository.
+- `git status`: Shows the current state of working directory including modified/untracked files.
+  
+- `git add <file_name>` : Stage specific file.
+  
+- `git add .`: Stage all files.
+  
+- `git commit -m "commit_message"`: Commit staged changes.
+  
+- `git commit -am "commit_message"`: Stage + commit tracked files.
 
-## View Changes
+---
 
-- `git status` : Shows the current state of working directory including modified/untracked files.
+## Viewing Changes
 
-- `git add <file_name>` : Stage your file.
+- `git diff`: Show File differences
+  
+- `git log`: View commit history
+  
+- `git log --oneline`: View history in a compact view.
+  
+- `git log --oneline --graph --all`: Visual commit graph.
 
-- `git status` : check staged files.
-
-- `git commit -m "commit message"` : commit your changes.
-
-- `git log` : view history
-
-- `git log --oneline` : View history in compact view.
-
-- `git diff` : See changes
+---
 
 ## Branching
 
-- `git branch` : Get the list of all present branches 
+- `git branch`: Get the list of all present branches
 
-- `git checkout -b <branch_name>` : Create a new branch if doesnt exists or switch to existing branch. (do not include **-b** if only switch required)
+-  `git branch <branch-name>`: Create branch.
 
 - `git chekout <branch_name>` : switch to branch
+  
+- `git checkout -b <branch_name>`: Create a new branch if it doesn't exist or switch to an existing branch. (do not include **-b** if only switch required)
 
 - `git switch <branch_name>` : Switch branch
 
 - `git switch -c <branch_name>`: creates a new branch and switches to that branch immediately.
 
-- `git merge <branch_needed_to_merge>` : Merge the branch with the current branch
-
 - `git branch -d <branch_name>` : Delete the branch
 
-## Stash & pop
+---
 
-- `git stash` : git stash temporarily saves uncommitted work and clears the working directory.
+## Merging & Rebasing
 
-- **Example:** In the middle of a feature, you need to switch to main to fix a bug → run **git stash**, later use **git stash pop** to restore.
+- `git merge <branch_needed_to_merge>`: Merge the branch with the current branch
 
-- `git stash pop` : Retrieve unsaved work done with git stash and it clears the stash references.
+- `git merge --squash <branch_name>`: Squashing means combining multiple commits into a single commit
 
-- `git stash apply` : Retrieve unsaved work done with git stash but keep the reference in stash list for later use.
+- `git rebase <branch>`: It integrates changes by replaying your commits on top of the latest state of another branch, creating cleaner and linear history.
+
+---
+
+## Handling Conflicts
+
+- `git status`: Shows conflict files.
+
+- `git add <file_name>`: Mark conflict resolved.
+
+- `git merge --abort` Cancel merge.
+  
+---
+
+## Stashing Work
+
+- `git stash`: git stash temporarily saves uncommitted work and clears the working directory.
+
+    - **Example:** In the middle of a feature, you need to switch to main to fix a bug → run **git stash**, later use **git stash pop** to restore.
+
+- `git stash list`: List saved stashes.
+  
+- `git stash pop`: Retrieve unsaved work done with git stash, and it clears the stash references.
+
+- `git stash apply`: Retrieve unsaved work done with git stash, but keep the reference in the stash list for later use.
+
+---
 
 ## Cherry pick
 
 - `git cherry-pick <commit_hash>`: Git cherry-pick allows you to apply a specific commit from one branch onto another without merging the entire branch.
 
-- `git merge --squash <branch_name>` : Squashing means combining multiple commits into a single commit
+---
 
-- `git revert <hash>` : Sfaely creates new commits that undo changes but keeps the history.
+## Undo changes
 
-- `git reset` : It moves HEAD pointer back by one , deleting commits & without laving history behind.
+- `git reset`: git reset moves the HEAD pointer to a specified commit and updates the staging area and/or working directory depending on the reset mode.
 
-  - `git reset --soft <hash>` : It removes commit id only, keeps the changes staged so you can commit again
-  - `git reset --mixed <hash>` : It removes commit id and keeps the chnages in working directory but unstaged.
-  - `git reset --hard <hash>` ; remove commit id and also permanently removes the changes.
+  - `git reset --soft <commit_hash>`: It removes the commit id only, keeps the changes staged so you can commit again
+  - `git reset --mixed <commit_hash>`: It removes the commit id and keeps the changes in the working directory, but unstaged.
+  - `git reset --hard <commit_hash>`: Remove the commit id and also permanently remove the changes.
 
-- `git rebase <branch>` : It integrates changes by replaying your commits on top of the latest state of another branch , creating cleaner and linear history.
+- `git reflog`: View git history including deleted commits.
 
-- `git rm <file_name>` : Remove file
+- `git revert <commit_hash>`: Safely creates new commits that undo changes but keep the history.
 
-- `git remove -f <file_name>` : Forcefully remove file.
+- `git revert --continue`: Continue the revert process.
+  
+---
 
-- `git remote add origin <url>` : Add a remote to the repository.
+## File Removal
 
-- `hit remote set-url origin <url>` : change the origin url.
+- `git rm <file_name>`: Remove file and stage deletion.
 
-- `git fetch origin <main>` : Fetches the changes not merges the changes
+- `git rm -f <file_name>`: Forcefully remove file.
 
-- `git pull origin <main>` : Fetch and merge changes from remote repo
+---
 
-- `git push origin <main>` : push the changes from local to remote repository.
+## Working with Remotes
 
+- `git remote add origin <url>`: Add a remote to the repository.
+
+- `git remote -v`: List all remote repositories.
+
+- `git remote set-url origin <url>`: Change the origin URL.
+
+- `git fetch`: Download remote changes
+
+- `git fetch origin <branch_name>`: Fetches the changes from a specific branch, but does not merge the changes
+
+- `git pull origin <branch_name>`: Fetch and merge changes from the remote repository 
+
+- `git push`: Push commits.
+  
+- `git push origin <branch_name>`: push the changes from local to the remote repository.
+
+- `git push -u origin <branch>`: Push and set upstream.
+
+---
 
 # GitHub CLI (gh) Commands
 
@@ -150,7 +222,7 @@
 
 ## GitHub Actions (Workflows)
 
-`gh run list --repo owner/repo` – Lists GitHub Actions workflow runs for a repositor[Oy.
+`gh run list --repo owner/repo` – Lists GitHub Actions workflow runs for a repository
 
 `gh run view <run-id> --repo owner/repo` – Displays details of a specific workflow run.
 
