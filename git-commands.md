@@ -216,80 +216,80 @@
 
 ## Authentication & Setup
 
-`gh --version` → Displays the installed GitHub CLI version.
+- `gh --version` → Displays the installed GitHub CLI version.
 
-`gh auth login` → Authenticates your GitHub account with the GitHub CLI.
+- `gh auth login` → Authenticates your GitHub account with the GitHub CLI.
 
-`gh auth status` → Shows the currently authenticated GitHub account and login status.
+- `gh auth status` → Shows the currently authenticated GitHub account and login status.
 
 ---
 
 ## Repository Management
 
-`gh repo create <name> --public --clone --add-readme` → Creates a new public repository on GitHub, initializes it with a README, and clones it locally.
+- `gh repo create <name> --public --clone --add-readme` → Creates a new public repository on GitHub, initializes it with a README, and clones it locally.
 
-`gh repo clone owner/repo` → Clones a GitHub repository using GitHub CLI.
+- `gh repo clone owner/repo` → Clones a GitHub repository using GitHub CLI.
 
-`gh repo view` → Displays details of the current repository in the terminal.
+- `gh repo view` → Displays details of the current repository in the terminal.
 
-`gh repo view --web` → Opens the current repository in your default web browser.
+- `gh repo view --web` → Opens the current repository in your default web browser.
 
-`gh repo list` → Lists repositories associated with your GitHub account.
+- `gh repo list` → Lists repositories associated with your GitHub account.
 
-`gh repo delete <repo-name> --confirm` → Deletes a repository from GitHub (permanent action).
+- `gh repo delete <repo-name> --confirm` → Deletes a repository from GitHub (permanent action).
 
 ---
 
 ## Issues Management
 
-`gh issue create --title "<title>" --body "<body>" --label <label>` → Creates a new issue from the terminal.
+- `gh issue create --title "<title>" --body "<body>" --label <label>` → Creates a new issue from the terminal.
 
-`gh issue list` → Lists all open issues in the repository.
+- `gh issue list` → Lists all open issues in the repository.
 
-`gh issue view <issue-number>` → Displays details of a specific issue.
+- `gh issue view <issue-number>` → Displays details of a specific issue.
 
-`gh issue close <issue-number>` → Closes an issue directly from the terminal.
+- `gh issue close <issue-number>` → Closes an issue directly from the terminal.
 
 ---
 
 ## Pull Requests
 
-`gh pr create --fill` –→ Creates a pull request using commit message for title and description.
+- `gh pr create --fill` –→ Creates a pull request using commit message for title and description.
 
-`gh pr list` → Lists all open pull requests.
+- `gh pr list` → Lists all open pull requests.
 
-`gh pr view` → Shows detailed information about a specific pull request.
+- `gh pr view` → Shows detailed information about a specific pull request.
 
-`gh pr checkout <pr-number>` → Checks out a pull request locally for review.
+- `gh pr checkout <pr-number>` → Checks out a pull request locally for review.
 
-`gh pr review --approve` → Submits an approval review for a pull request.
+- `gh pr review --approve` → Submits an approval review for a pull request.
 
-`gh pr merge --merge` → Merges a pull request using the default merge method.
+- `gh pr merge --merge` → Merges a pull request using the default merge method.
 
-`gh pr merge --squash` → Merges a pull request by squashing all commits into one.
+- `gh pr merge --squash` → Merges a pull request by squashing all commits into one.
 
-`gh pr merge --rebase` → Merges a pull request using rebase strategy.
+- `gh pr merge --rebase` → Merges a pull request using rebase strategy.
 
 ---
 
 ## GitHub Actions (Workflows)
 
-`gh run list --repo owner/repo` → Lists GitHub Actions workflow runs for a repository
+- `gh run list --repo owner/repo` → Lists GitHub Actions workflow runs for a repository
 
-`gh run view <run-id> --repo owner/repo` → Displays details of a specific workflow run.
+- `gh run view <run-id> --repo owner/repo` → Displays details of a specific workflow run.
 
 ---
 
 ## Advanced & Useful Commands
 
-`gh api <endpoint>` → Makes a direct GitHub REST API call from the terminal.
+- `gh api <endpoint>` → Makes a direct GitHub REST API call from the terminal.
 
-`gh gist create <file>` → Creates a GitHub Gist from a file.
+- `gh gist create <file>` → Creates a GitHub Gist from a file.
 
-`gh release create <tag>` → Creates a new GitHub release with a specified tag.
+- `gh release create <tag>` → Creates a new GitHub release with a specified tag.
 
-`gh alias set <alias> "<command>"` → Creates a custom shortcut for frequently used commands.
+- `gh alias set <alias> "<command>"` → Creates a custom shortcut for frequently used commands.
 
-`gh search repos <keyword>` → Searches public GitHub repositories from the terminal.
+- `gh search repos <keyword>` → Searches public GitHub repositories from the terminal.
 
 ---
