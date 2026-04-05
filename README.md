@@ -2,7 +2,7 @@
 
 A structured collection of **daily-use DevOps commands and scripting references** that I use in real workflows.
 
-This repository acts as a **quick reference guide** for Git, GitHub CLI, and Shell Scripting — designed to save time during development, debugging, and automation tasks.
+This repository acts as a **quick reference guide** for Git, Linux, GitHub CLI, and Shell Scripting — designed to save time during development, debugging, and automation tasks.
 
 ---
 
@@ -37,6 +37,25 @@ A comprehensive list of Git and GitHub CLI commands including:
 
 ---
 
+### 🐧 Linux Commands Cheat Sheet
+
+📄 `linux_commands.md`
+
+A complete and categorized reference of essential Linux commands covering:
+
+* Basic commands & file operations
+* File permissions & user management
+* Process & service management
+* Networking & disk management
+* System monitoring & performance tools
+* Text processing & package management
+* Security, firewall, and shell utilities
+
+👉 Designed for **quick lookup + real-world system usage**
+📎 Reference: [linux_commands.md](./linux_commands.md)
+
+---
+
 ### 🐚 Shell Scripting Cheat Sheet
 
 📄 `shell_scripting_cheatsheet.md`
@@ -53,6 +72,7 @@ A structured guide covering:
 * Debugging & error handling (`set -euo pipefail`)
 
 👉 Designed for both beginners and real-world scripting usage
+
 📎 Reference: [shell_scripting_cheatsheet.md](./shell_scripting_cheatsheet.md)
 
 ---
@@ -60,8 +80,9 @@ A structured guide covering:
 ## 🎯 Key Highlights
 
 * ✅ Clean and categorized command references
+* ✅ Covers **Linux + Git + Shell scripting in one place**
 * ✅ Real-world examples (not just theory)
-* ✅ Covers both beginner → advanced concepts
+* ✅ Beginner → advanced friendly
 * ✅ Focused on **practical DevOps usage**
 
 ---
@@ -71,14 +92,14 @@ A structured guide covering:
 Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/cheat-sheets.git
+git clone https://github.com/Sarthbhalerao/cheat-sheets.git
 cd cheat-sheets
 ```
 
 Then open any file:
 
 ```bash
-cat git-commands.md
+cat linux_commands.md
 ```
 
 Or view directly on GitHub for quick reference.
@@ -102,9 +123,7 @@ This is a personal reference repo, but suggestions and improvements are welcome!
 ---
 
 ## 📬 Connect With Me
-
-**Sarthak Bhalerao**
-🔗 LinkedIn: https://linkedin.com/in/sarthak-bhalerao
+LinkedIn: [Sarthak Bhalerao](https://linkedin.com/in/sarthak-bhalerao)
 
 ---
 
